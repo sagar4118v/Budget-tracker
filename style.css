@@ -1,0 +1,270 @@
+body {
+            margin: 0;
+            font-family: Arial;
+            background: #0f172a;
+            color: white;
+        }
+
+
+        .wrapper {
+            display: flex;
+        }
+
+        .sidebar {
+            width: 220px;
+            background: #1e293b;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #cbd5f5;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            background: #334155;
+            border-radius: 6px;
+        }
+
+        .main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .c1 { background: #f59e0b; }
+        .c2 { background: #22c55e; }
+        .c3 { background: #ef4444; }
+
+        table {
+            width: 100%;
+            background: #1e293b;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #334155;
+        }
+        td { text-align: center; }
+        th{
+            background: #334155;
+            font-size: 20px;
+        }
+
+        .income { color: #22c55e; }
+        .expense { color: #ef4444; }
+
+        .charts {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .chart-box {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .full {
+            grid-column: span 2;
+        }
+
+
+       form input,
+       form button,
+       form a {
+        height: 40px;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .clear{
+        background: #9e3131;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+    }
+    
+
+/* =========================================================
+   TABLET RESPONSIVE
+========================================================= */
+
+@media screen and (max-width: 992px){
+
+    .cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .charts{
+        grid-template-columns: 1fr;
+    }
+
+    .full{
+        grid-column: span 1;
+    }
+
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    form{
+        flex-wrap: wrap;
+    }
+}
+
+
+/* =========================================================
+   MOBILE RESPONSIVE
+========================================================= */
+
+@media screen and (max-width: 768px){
+
+    .wrapper{
+        flex-direction: column;
+    }
+
+    .sidebar{
+        width: 100%;
+        min-height: auto;
+        padding: 15px;
+    }
+
+    .sidebar h2{
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .sidebar a{
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .main{
+        width: 100%;
+        padding: 15px;
+    }
+
+    .cards{
+        grid-template-columns: 1fr;
+    }
+
+    .charts{
+        grid-template-columns: 1fr;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    form input,
+    form button,
+    form a,
+    form select{
+        width: 100%;
+    }
+
+    table{
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        width: 100%;
+    }
+
+    th,
+    td{
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .card{
+        padding: 18px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE DEVICES
+========================================================= */
+
+@media screen and (max-width: 480px){
+
+    body{
+        font-size: 14px;
+    }
+
+    .main{
+        padding: 10px;
+    }
+
+    .card{
+        padding: 15px;
+    }
+
+    th{
+        font-size: 15px;
+    }
+
+    td{
+        font-size: 13px;
+    }
+
+    .sidebar{
+        padding: 10px;
+    }
+
+    .sidebar a{
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    form input,
+    form button,
+    form a,
+    form select{
+        font-size: 14px;
+        height: 40px;
+    }
+
+    .navbar{
+        gap: 10px;
+    }
+}
+
